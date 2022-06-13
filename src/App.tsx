@@ -16,6 +16,10 @@ function Board() {
     setStatus(squaresCopy)
   }
 
+  function restart() {
+    setStatus(Array(9).fill(null))
+  }
+
   function position(i: any) {
     return (
       <button className="square" onClick={() => selectedPosition(i)}>
@@ -43,7 +47,7 @@ function Board() {
         {position(8)}
       </div>
       <br></br>
-      <button className="restart">
+      <button className="restart" onClick={restart}>
         RESTART GAME
       </button>
     </>
