@@ -1,6 +1,7 @@
 {
-  "short_name": "Tic Tac Toe",
-  "name": "Tic Tac Toe Game",
+  "short_name": "Weather App",
+  "name": "React Weather App",
   "start_url": ".",
-  "display": "standalone"
+  "display": "standalone",
+  "background_color": "#ffffff"
 }
