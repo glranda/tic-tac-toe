@@ -1,13 +1,14 @@
-import * as React from 'react'
+import * as React from "react"
+import "./App.css"
 
 function Board() {
-  const [squares, setStatus] = React.useState(Array(9).fill(null));
+  const [squares, setStatus] = React.useState(Array(9).fill(null))
 
-  const nextValue = setNextValue(squares);
-  const winner = determineWinner(squares);
-  const status = calculateStatus(winner, squares, nextValue);
+  const nextValue = setNextValue(squares)
+  const winner = determineWinner(squares)
+  const status = calculateStatus(winner, squares, nextValue)
 
-  function selectedPosition(square: any) {
+  function selectedPosition(square: number) {
     if (winner || squares[square]) {
       return
     } 
@@ -20,7 +21,7 @@ function Board() {
     setStatus(Array(9).fill(null))
   }
 
-  function position(i: any) {
+  function position(i: number) {
     return (
       <button className="square" onClick={() => selectedPosition(i)}>
         {squares[i]}
@@ -54,11 +55,11 @@ function Board() {
   )
 }
 
-function setNextValue(squares: any) {
-  return squares.filter(Boolean).length % 2 === 0 ? 'X' : '0'
+function setNextValue(squares: object[]) {
+  return squares.filter(Boolean).length % 2 === 0 ? "X" : "0"
 }
 
-function determineWinner(squares: any) {
+function determineWinner(squares: object[]) {
   const lines = [
     [0,1,2],
     [3,4,5],
@@ -77,7 +78,7 @@ function determineWinner(squares: any) {
   }
 }
 
-function calculateStatus(winner: any, squares: any, nextValue: any) {
+function calculateStatus(winner: any, squares: object[], nextValue: string) {
   return winner ? `Winner: ${winner}` : squares.every(Boolean) ? `Scratch` : `Next Turn: ${nextValue}`
 }
 
@@ -86,13 +87,13 @@ function Game() {
     <div className="game">
       <Board />
     </div>
-  );
+  )
 }
 
 function App() {
   return (
     <Game />
-  );
+  )
 }
 
 export default App;
