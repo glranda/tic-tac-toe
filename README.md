@@ -1,9 +1,9 @@
 # React Tic-Tac-Toe App
 
-This project was written in React/Typescript
+This game was written in React/Typescript
 
-You can view the production app here ->
+Live app link coming shortly (sorry!)
 
 ### `Code Review`
 
-The code running this game can be reviewed at `src/App.tsx` 
+The React SPA running this game can be code reviewed at `src/App.tsx`
