@@ -84,7 +84,7 @@ function calculateStatus(winner: any, squares: object[], nextValue: string) {
 
 function Game() {
   return (
-    <div className="game">
+    <div className="game" data-testid="game">
       <Board />
     </div>
   )
