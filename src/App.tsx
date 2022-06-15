@@ -2,7 +2,11 @@ import * as React from "react"
 import "./App.css"
 
 function Board() {
-  const [squares, setStatus] = React.useState(Array(9).fill(null))
+  const [squares, setStatus] = React.useState(JSON.parse(window.localStorage.getItem('squares')!) || Array(9).fill(null))
+
+  React.useEffect(() => {
+    window.localStorage.setItem('squares', JSON.stringify(squares))
+  }, [squares])
 
   const nextValue = setNextValue(squares)
   const winner = determineWinner(squares)
