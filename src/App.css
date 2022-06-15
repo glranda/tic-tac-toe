@@ -2,8 +2,9 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: center;
-  margin-top: 2em;
+  overflow: hidden;
 }
 
 .square {
@@ -13,6 +14,15 @@
   line-height: 25px;
   margin-right: -1px;
   margin-top: -1px;
+  text-align: center;
   padding: 0;
   width: 30px;
+}
+
+.restart {
+  margin-top: 1em;
+}
+
+.root {
+  height: 100%;
 }
