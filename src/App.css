@@ -14,9 +14,13 @@
   line-height: 25px;
   margin-right: -1px;
   margin-top: -1px;
-  text-align: center;
   padding: 0;
   width: 30px;
+}
+
+button {
+  color: #222;
+  text-align: center;
 }
 
 .restart {
