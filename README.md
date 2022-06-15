@@ -2,7 +2,7 @@
 
 This game was written in React/Typescript
 
-Live app link coming shortly (sorry!)
+You can view the live app here -> https://glranda.github.io/tic-tac-toe/
 
 ### `Code Review`
 
